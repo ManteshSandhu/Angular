@@ -9,10 +9,6 @@ import {CatDataService} from '../cat-data.service';
 })
 export class OutputComponent {
   title = 'Output';
-  public gend = [
-    '-- select gender --',
-    'Male', 'Female',
-    'Third Gender'];
   public cat: Cat;
   public constructor(dataService: CatDataService) {
     this.cat = dataService.cat;

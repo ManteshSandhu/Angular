@@ -21,7 +21,7 @@ export class InputComponent implements OnInit {
   }
 
   public send(data) {
-    this.cat.catName = data.catName;
+    this.cat.catName = data.cName;
     this.cat.gender = data.gender;
     this.cat.vacc = data.vacc;
     this.router.navigate(['output']).then(() => {
@@ -32,7 +32,7 @@ export class InputComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      catName: new FormControl('', Validators.required),
+      cName: new FormControl('', Validators.required),
       gender: new FormControl(0, this.gendValidator),
       vacc: new FormControl(false)
     });

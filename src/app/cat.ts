@@ -4,8 +4,8 @@ export class Cat {
   public vacc: boolean;
 
   public constructor() {
-    this.catName = ' ';
-    this.gender = ' ';
+    this.catName = '';
+    this.gender = '';
     this.vacc = false;
   }
 }

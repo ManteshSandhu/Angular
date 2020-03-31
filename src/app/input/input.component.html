@@ -5,7 +5,7 @@
     <p>
       <label for="catName" class="input-label">Name:</label><br/>
       <input id="catName" type="text" formControlName="cName" name="cName">
-      <span *ngIf="form.get('catName').hasError('required')"
+      <span *ngIf="form.get('cName').hasError('required')"
             class="validation-message">
         <br/>Cat name is required
       </span>
@@ -19,7 +19,7 @@
                     formControlName="gender">Female</label>
       <span *ngIf="form.get('gender').hasError('gender')"
             class="validation-message">
-        <br/>Select Gender
+        <br/>Select Gender please
       </span>
     </p>
 

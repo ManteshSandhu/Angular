@@ -5,8 +5,8 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
-import {RouterModule, Routes} from '@angular/router';
 import {CatDataService} from './cat-data.service';
+import {RouterModule, Routes} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
 
 const routes: Routes = [
@@ -25,8 +25,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
     ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [CatDataService],
   bootstrap: [AppComponent]

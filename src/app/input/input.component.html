@@ -1,1 +1,36 @@
-<p>input works!</p>
+<section>
+  <h1>{{title}}</h1>
+  <form [formGroup]="form" (ngSubmit)="send(form.value)">
+    <h2>Cat:</h2>
+    <p>
+      <label for="catName" class="input-label">Name:</label><br/>
+      <input id="catName" type="text" formControlName="cName" name="cName">
+      <span *ngIf="form.get('catName').hasError('required')"
+            class="validation-message">
+        <br/>Cat name is required
+      </span>
+    </p>
+    <h2>Gender:</h2>
+    <p>
+      <label for="gend" class="input-label">Gender: </label><br/>
+      <select id="gend" formControlName="gender" name="gender">
+        <option *ngFor="let g of gend; let i=index;" [value]='i'>{{g}}</option>
+      </select>
+      <span *ngIf="form.get('gender').hasError('gender')"
+            class="validation-message">
+        <br/>Select Gender
+      </span>
+    </p>
+
+    <p>
+      <label class="input-label">Vaccination:</label><br/>
+      <label><input type="checkbox" value="yes" class="checkbox-label"
+                    formControlName="vacc" name="vacc">Yes</label><br/>
+      <label><input type="checkbox" value="no" class="checkbox-label"
+                    formControlName="nvacc" name="nvacc">No</label>
+    </p>
+    <p>
+      <button type="submit" [disabled]="!form.valid">Send</button>
+    </p>
+  </form>
+</section>

@@ -13,22 +13,19 @@
     <h2>Gender:</h2>
     <p>
       <label class="input-label">Gender:</label><br/>
-      <label><input type="radio" value="male" class="radio-label"
-                    formControlName="gender" name="gender">Male</label>
-      <label><input name="gender" type="radio" value="female" class="radio-label"
-                    formControlName="gender">Female</label>
-      <span *ngIf="form.get('gender').hasError('gender')"
+      <label><input type="radio" value="Male" class="radio-label"
+                    formControlName="gend" name="gend">Male</label>
+      <label><input  type="radio" value="Female" class="radio-label"
+                    formControlName="gend" name="gend">Female</label>
+      <span *ngIf="form.get('gend').hasError('gend')"
             class="validation-message">
         <br/>Select Gender please
       </span>
     </p>
-
     <p>
       <label class="input-label">Vaccination:</label><br/>
-      <label><input type="checkbox" value="yes" class="checkbox-label"
+      <label><input type="checkbox" value="Yes" class="checkbox-label"
                     formControlName="vacc" name="vacc">Yes</label><br/>
-      <label><input type="checkbox" value="no" class="checkbox-label"
-                    formControlName="nvacc" name="nvacc">No</label>
     </p>
     <p>
       <button type="submit" [disabled]="!form.valid">Send</button>

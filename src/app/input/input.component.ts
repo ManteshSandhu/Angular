@@ -3,6 +3,7 @@ import {Cat} from '../cat';
 import {CatDataService} from '../cat-data.service';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {NullAstVisitor} from '@angular/compiler';
 
 @Component({
   selector: 'app-input',
@@ -22,7 +23,7 @@ export class InputComponent implements OnInit {
 
   public send(data) {
     this.cat.catName = data.cName;
-    this.cat.gender = data.gender;
+    this.cat.gender = data.gend;
     this.cat.vacc = data.vacc;
     this.router.navigate(['output']).then(() => {
       console.log('showing the output data');
@@ -33,15 +34,15 @@ export class InputComponent implements OnInit {
   ngOnInit(): void {
     this.form = new FormGroup({
       cName: new FormControl('', Validators.required),
-      gender: new FormControl(0, this.gendValidator),
+      gend: new FormControl('', this.gendValidator),
       vacc: new FormControl(false)
     });
   }
   public gendValidator(control: FormControl) {
-    if (control.value > 0) {
+    if (control.value === 'Male' || control.value === 'Female') {
       return null;
     } else {
-      return {gender: true};
+      return {gend: true};
     }
   }
 }

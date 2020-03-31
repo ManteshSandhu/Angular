@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
+import { InputComponent } from './input/input.component';
+import { OutputComponent } from './output/output.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
+    InputComponent,
+    OutputComponent
   ],
   imports: [
     BrowserModule

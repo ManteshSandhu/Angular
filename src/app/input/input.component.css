@@ -1,22 +1,25 @@
 section{
   padding: 1em;
-  background: cornsilk;
+  background: lightblue;
+  width:400px;
 }
 
 h1{
-  color:dodgerblue;
+  color:blue;
+  text-align: center;
 }
 
 h2{
-  color: forestgreen;
+  color: Red;
 }
 
 label.input-label{
-  color: cornflowerblue;
+  color: blue;
   font-weight: bolder;
+
 }
 
 span.validation-message{
-  color: coral;
+  color: darkred;
   font-style: oblique;
 }

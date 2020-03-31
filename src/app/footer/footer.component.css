@@ -1,16 +1,12 @@
 footer{
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-style: italic;
   font-weight: bolder;
-  border-top: #78909c solid;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  border-top: sienna solid;
+  padding-top: 1em;
+  padding-bottom: 1em;
   padding-left: 1em;
   margin-top: 1.5em;
-  width: 25em;
-  color: #546e7a;
-}
-
-footer .hart{
-  color: #e91e63;
+  width: 30em;
+  color: darkgoldenrod;
 }

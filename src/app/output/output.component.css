@@ -1,30 +1,34 @@
 section{
   padding: 1em;
-  background: wheat;
+  background: lightblue;
+  width: 400px;
 }
 
 h1{
-  color:dodgerblue;
+  color:blue;
+  text-align: center;
+
 }
 
 h2{
-  color: forestgreen;
+  color: blue;
 }
 
 label.output-label{
-  color: cornflowerblue;
+  color: red;
   font-weight: bolder;
 }
 
 span.output-value{
   font-weight: bolder;
   font-style: italic;
-  color: blueviolet;
+  color: Blue;
   margin-left: 1em;
 }
 
 a{
-  color: limegreen;
+  color: blue;
   font-weight: bolder;
+
 }
 

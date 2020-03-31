@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 import {Cat} from '../cat';
 import {CatDataService} from '../cat-data.service';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
@@ -11,10 +11,6 @@ import {Router} from '@angular/router';
 })
 export class InputComponent implements OnInit {
   public title = 'Input';
-  public gend = [
-    '-- select gender --',
-    'Male', 'Female',
-    'ThirdGender'];
   public form: FormGroup;
   public cat: Cat;
   private router: Router;
@@ -36,9 +32,16 @@ export class InputComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      cName: new FormControl('', Validators.required),
-      gender: new FormControl(0, Validators.required),
+      catName: new FormControl('', Validators.required),
+      gender: new FormControl(0, this.gendValidator),
       vacc: new FormControl(false)
     });
+  }
+  public gendValidator(control: FormControl) {
+    if (control.value > 0) {
+      return null;
+    } else {
+      return {gender: true};
+    }
   }
 }

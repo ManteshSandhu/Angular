@@ -12,10 +12,11 @@
     </p>
     <h2>Gender:</h2>
     <p>
-      <label for="gend" class="input-label">Gender: </label><br/>
-      <select id="gend" formControlName="gender" name="gender">
-        <option *ngFor="let g of gend; let i=index;" [value]='i'>{{g}}</option>
-      </select>
+      <label class="input-label">Gender:</label><br/>
+      <label><input type="radio" value="male" class="radio-label"
+                    formControlName="gender" name="gender">Male</label>
+      <label><input name="gender" type="radio" value="female" class="radio-label"
+                    formControlName="gender">Female</label>
       <span *ngIf="form.get('gender').hasError('gender')"
             class="validation-message">
         <br/>Select Gender
